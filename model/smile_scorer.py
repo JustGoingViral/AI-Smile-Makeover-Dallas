@@ -115,6 +115,8 @@ class SmileScorer:
             
             # Apply weighted combination for more realistic scoring
             # This stub uses a weighted average approach
+            # Weights: alignment (35%), symmetry (35%), color_vitality (30%)
+            # These weights prioritize structural aspects over color
             weighted_score = (
                 alignment * 0.35 +
                 symmetry * 0.35 +

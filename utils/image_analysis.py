@@ -23,12 +23,14 @@ class SmileAnalyzer:
         )
         
         # Key facial landmark indices for smile analysis
-        # These are specific indices from MediaPipe Face Mesh
-        self.LIPS_INDICES = [61, 291, 0, 17, 39, 269, 405, 181, 314, 17, 84, 314]
+        # These are specific indices from MediaPipe Face Mesh (468 landmarks)
+        # Reference: https://github.com/google/mediapipe/blob/master/mediapipe/modules/face_geometry/data/canonical_face_model_uv_visualization.png
         self.LEFT_MOUTH_CORNER = 61
         self.RIGHT_MOUTH_CORNER = 291
-        self.UPPER_LIP_CENTER = 0
-        self.LOWER_LIP_CENTER = 17
+        self.UPPER_LIP_CENTER = 13  # Top of upper lip center
+        self.LOWER_LIP_CENTER = 14  # Bottom of lower lip center
+        self.UPPER_LIP_TOP = 0  # Vermillion border top
+        self.LOWER_LIP_BOTTOM = 17  # Vermillion border bottom
         
     def analyze_image(self, image_array: np.ndarray) -> Dict[str, float]:
         """
@@ -186,8 +188,8 @@ class SmileAnalyzer:
             # Extract mouth region using landmarks
             mouth_points = [landmarks[i] for i in [self.LEFT_MOUTH_CORNER, 
                                                    self.RIGHT_MOUTH_CORNER, 
-                                                   self.UPPER_LIP_CENTER, 
-                                                   self.LOWER_LIP_CENTER]]
+                                                   self.UPPER_LIP_TOP, 
+                                                   self.LOWER_LIP_BOTTOM]]
             
             if not mouth_points:
                 return 5.0

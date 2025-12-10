@@ -1,8 +1,8 @@
 Flask==3.0.0
-mediapipe==0.10.9
+mediapipe==0.10.14
 opencv-python==4.9.0.80
-numpy==1.24.3
-torch==2.1.2
-torchvision==0.16.2
-Pillow==10.1.0
-Werkzeug==3.0.1
+numpy==1.26.4
+torch==2.6.0
+torchvision==0.21.0
+Pillow==10.2.0
+Werkzeug==3.0.3
