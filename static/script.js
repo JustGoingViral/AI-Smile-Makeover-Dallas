@@ -156,8 +156,9 @@ function displayResults(data) {
     loadingSection.style.display = 'none';
     resultsSection.style.display = 'block';
 
-    // Animate score
+    // Animate score with circular progress
     animateScore(data.score);
+    animateScoreCircle(data.score);
 
     // Display metrics
     document.getElementById('alignmentValue').textContent = data.alignment.toFixed(1);
@@ -173,6 +174,20 @@ function displayResults(data) {
 
     // Display insight
     document.getElementById('insightText').textContent = data.insight;
+}
+
+// Animate Score Circle
+function animateScoreCircle(targetScore) {
+    const circle = document.getElementById('scoreProgress');
+    if (!circle) return;
+    
+    const circumference = 565.48; // 2 * PI * 90
+    const progress = (targetScore / 10) * circumference;
+    const dashoffset = circumference - progress;
+    
+    setTimeout(() => {
+        circle.style.strokeDashoffset = dashoffset;
+    }, 200);
 }
 
 // Animate Score

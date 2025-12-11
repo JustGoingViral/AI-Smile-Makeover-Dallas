@@ -3,101 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Smile Makeover Dallas</title>
+    <title>AI Smile Makeover Dallas | Revolutionary 2026 Smile Analysis Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+    <div class="background-gradient"></div>
+    <div class="background-pattern"></div>
+    
     <div class="container">
         <header>
-            <h1>AI Smile Makeover Dallas</h1>
-            <p class="tagline">Analyze your smile with advanced AI technology</p>
+            <div class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M32 8C18.7452 8 8 18.7452 8 32C8 45.2548 18.7452 56 32 56C45.2548 56 56 45.2548 56 32C56 18.7452 45.2548 8 32 8Z" fill="url(#logoGradient)"/>
+                    <path d="M20 28C20 26.8954 20.8954 26 22 26C23.1046 26 24 26.8954 24 28C24 29.1046 23.1046 30 22 30C20.8954 30 20 29.1046 20 28Z" fill="white"/>
+                    <path d="M40 28C40 26.8954 40.8954 26 42 26C43.1046 26 44 26.8954 44 28C44 29.1046 43.1046 30 42 30C40.8954 30 40 29.1046 40 28Z" fill="white"/>
+                    <path d="M20 38C20 34 24 32 32 32C40 32 44 34 44 38" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div class="logo-text">
+                    <h1>AI Smile Makeover Dallas</h1>
+                    <p class="subtitle">Revolutionary 2026 Platform</p>
+                </div>
+            </div>
+            <p class="tagline">Next-Generation AI-Powered Smile Analysis Technology</p>
+            <div class="badge-container">
+                <span class="badge">MediaPipe AI</span>
+                <span class="badge">PyTorch Neural Network</span>
+                <span class="badge">Advanced Computer Vision</span>
+            </div>
         </header>
 
         <main>
-            <div class="upload-section">
+            <div class="upload-section glass-card">
+                <div class="section-header">
+                    <h2 class="section-title">Begin Your Smile Journey</h2>
+                    <p class="section-description">Upload a high-quality photo for comprehensive AI analysis</p>
+                </div>
+                
                 <div class="upload-area" id="uploadArea">
-                    <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                    </svg>
-                    <h2>Upload Your Smile Photo</h2>
-                    <p>Click to browse or drag and drop your image here</p>
-                    <p class="file-info">Supports JPG, PNG (Max 10MB)</p>
+                    <div class="upload-icon-wrapper">
+                        <svg class="upload-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="uploadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="32" cy="32" r="30" stroke="url(#uploadGradient)" stroke-width="2" fill="none"/>
+                            <path d="M32 20L32 44M32 20L24 28M32 20L40 28" stroke="url(#uploadGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 48L44 48" stroke="url(#uploadGradient)" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="upload-title">Upload Your Smile Photo</h3>
+                    <p class="upload-description">Drag and drop your image or click to browse</p>
+                    <p class="file-info">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 4V8M8 11V11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Supports JPG, PNG • Maximum 10MB • Best with frontal smile
+                    </p>
                     <input type="file" id="fileInput" accept="image/jpeg,image/jpg,image/png" hidden>
-                    <button class="btn-primary" id="browseBtn">Browse Files</button>
+                    <button class="btn-primary btn-gradient" id="browseBtn">
+                        <span>Select Image</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M15 11L15 15L5 15L5 11M10 3L10 13M10 3L7 6M10 3L13 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
 
                 <div class="preview-section" id="previewSection" style="display: none;">
                     <div class="preview-container">
                         <img id="imagePreview" src="" alt="Preview">
-                        <button class="btn-close" id="clearBtn">&times;</button>
+                        <button class="btn-close" id="clearBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="btn-primary btn-analyze" id="analyzeBtn">Analyze Smile</button>
+                    <button class="btn-primary btn-gradient btn-analyze" id="analyzeBtn">
+                        <span>Start AI Analysis</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 3L10 17M10 17L14 13M10 17L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
 
-            <div class="loading-section" id="loadingSection" style="display: none;">
-                <div class="loader"></div>
-                <p>Analyzing your smile...</p>
+            <div class="loading-section glass-card" id="loadingSection" style="display: none;">
+                <div class="loader-wrapper">
+                    <div class="loader-ring"></div>
+                    <div class="loader-ring"></div>
+                    <div class="loader-ring"></div>
+                    <svg class="loader-icon" viewBox="0 0 64 64" fill="none">
+                        <path d="M32 8C18.7452 8 8 18.7452 8 32C8 45.2548 18.7452 56 32 56C45.2548 56 56 45.2548 56 32" stroke="url(#loaderGradient)" stroke-width="3" stroke-linecap="round"/>
+                        <defs>
+                            <linearGradient id="loaderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3 class="loading-title">Analyzing Your Smile</h3>
+                <p class="loading-description">Our AI is processing 468 facial landmarks using MediaPipe and PyTorch neural networks...</p>
+                <div class="loading-steps">
+                    <div class="loading-step active">
+                        <div class="step-icon">✓</div>
+                        <span>Image Uploaded</span>
+                    </div>
+                    <div class="loading-step processing">
+                        <div class="step-icon">
+                            <div class="spinner-small"></div>
+                        </div>
+                        <span>Detecting Landmarks</span>
+                    </div>
+                    <div class="loading-step">
+                        <div class="step-icon">◦</div>
+                        <span>Computing Metrics</span>
+                    </div>
+                    <div class="loading-step">
+                        <div class="step-icon">◦</div>
+                        <span>Generating Insights</span>
+                    </div>
+                </div>
             </div>
 
             <div class="results-section" id="resultsSection" style="display: none;">
-                <h2>Analysis Results</h2>
+                <div class="section-header">
+                    <h2 class="section-title">Your Smile Analysis</h2>
+                    <p class="section-description">Comprehensive AI-powered evaluation of your smile characteristics</p>
+                </div>
                 
-                <div class="score-display">
-                    <div class="score-circle">
-                        <div class="score-value" id="scoreValue">0</div>
-                        <div class="score-label">Overall Score</div>
+                <div class="score-display glass-card">
+                    <div class="score-circle-wrapper">
+                        <svg class="score-ring" viewBox="0 0 200 200">
+                            <defs>
+                                <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="none" stroke="#e0e7ff" stroke-width="8"/>
+                            <circle id="scoreProgress" cx="100" cy="100" r="90" fill="none" stroke="url(#scoreGradient)" stroke-width="8" stroke-linecap="round" stroke-dasharray="565.48" stroke-dashoffset="565.48" transform="rotate(-90 100 100)"/>
+                        </svg>
+                        <div class="score-content">
+                            <div class="score-value" id="scoreValue">0</div>
+                            <div class="score-label">Overall Score</div>
+                            <div class="score-subtitle">out of 10</div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="metrics-grid">
-                    <div class="metric-card">
-                        <div class="metric-icon">📏</div>
-                        <h3>Alignment</h3>
+                    <div class="metric-card glass-card">
+                        <div class="metric-header">
+                            <svg class="metric-icon" viewBox="0 0 48 48" fill="none">
+                                <defs>
+                                    <linearGradient id="alignmentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect x="8" y="14" width="32" height="4" rx="2" fill="url(#alignmentGradient)"/>
+                                <rect x="12" y="22" width="24" height="4" rx="2" fill="url(#alignmentGradient)"/>
+                                <rect x="8" y="30" width="32" height="4" rx="2" fill="url(#alignmentGradient)"/>
+                            </svg>
+                            <h3>Alignment</h3>
+                        </div>
                         <div class="metric-value" id="alignmentValue">-</div>
                         <div class="metric-bar">
-                            <div class="metric-fill" id="alignmentBar"></div>
+                            <div class="metric-fill metric-fill-alignment" id="alignmentBar"></div>
                         </div>
+                        <p class="metric-description">Horizontal balance and centering</p>
                     </div>
 
-                    <div class="metric-card">
-                        <div class="metric-icon">⚖️</div>
-                        <h3>Symmetry</h3>
+                    <div class="metric-card glass-card">
+                        <div class="metric-header">
+                            <svg class="metric-icon" viewBox="0 0 48 48" fill="none">
+                                <defs>
+                                    <linearGradient id="symmetryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M24 8L24 40M8 24L40 24" stroke="url(#symmetryGradient)" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="16" cy="16" r="4" fill="url(#symmetryGradient)"/>
+                                <circle cx="32" cy="16" r="4" fill="url(#symmetryGradient)"/>
+                                <circle cx="16" cy="32" r="4" fill="url(#symmetryGradient)"/>
+                                <circle cx="32" cy="32" r="4" fill="url(#symmetryGradient)"/>
+                            </svg>
+                            <h3>Symmetry</h3>
+                        </div>
                         <div class="metric-value" id="symmetryValue">-</div>
                         <div class="metric-bar">
-                            <div class="metric-fill" id="symmetryBar"></div>
+                            <div class="metric-fill metric-fill-symmetry" id="symmetryBar"></div>
                         </div>
+                        <p class="metric-description">Left-right facial balance</p>
                     </div>
 
-                    <div class="metric-card">
-                        <div class="metric-icon">✨</div>
-                        <h3>Color Vitality</h3>
+                    <div class="metric-card glass-card">
+                        <div class="metric-header">
+                            <svg class="metric-icon" viewBox="0 0 48 48" fill="none">
+                                <defs>
+                                    <linearGradient id="vitalityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ffeaa7;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#fdcb6e;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="24" cy="24" r="8" fill="url(#vitalityGradient)"/>
+                                <path d="M24 8L24 16M24 32L24 40M8 24L16 24M32 24L40 24M13 13L18 18M30 18L35 13M13 35L18 30M30 30L35 35" stroke="url(#vitalityGradient)" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                            <h3>Color Vitality</h3>
+                        </div>
                         <div class="metric-value" id="colorValue">-</div>
                         <div class="metric-bar">
-                            <div class="metric-fill" id="colorBar"></div>
+                            <div class="metric-fill metric-fill-vitality" id="colorBar"></div>
                         </div>
+                        <p class="metric-description">Brightness and color quality</p>
                     </div>
                 </div>
 
-                <div class="insight-card">
-                    <h3>Professional Insight</h3>
+                <div class="insight-card glass-card">
+                    <div class="insight-header">
+                        <svg class="insight-icon" viewBox="0 0 48 48" fill="none">
+                            <defs>
+                                <linearGradient id="insightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="24" cy="24" r="18" stroke="url(#insightGradient)" stroke-width="2.5" fill="none"/>
+                            <path d="M24 16V24L28 28" stroke="url(#insightGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h3>Professional Insight</h3>
+                    </div>
                     <p id="insightText">-</p>
+                    <div class="insight-badge">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 2L9.5 5.5L13 6L10.5 8.5L11 12L8 10L5 12L5.5 8.5L3 6L6.5 5.5L8 2Z" fill="currentColor"/>
+                        </svg>
+                        <span>AI-Powered Analysis</span>
+                    </div>
                 </div>
 
-                <button class="btn-secondary" id="newAnalysisBtn">Analyze Another Image</button>
+                <button class="btn-secondary btn-outline" id="newAnalysisBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M16 4L4 16M4 4L16 16M10 3L10 7M10 13L10 17M3 10L7 10M13 10L17 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Analyze Another Smile</span>
+                </button>
             </div>
 
-            <div class="error-section" id="errorSection" style="display: none;">
+            <div class="error-section glass-card" id="errorSection" style="display: none;">
                 <div class="error-message">
-                    <span class="error-icon">⚠️</span>
+                    <svg class="error-icon" viewBox="0 0 64 64" fill="none">
+                        <circle cx="32" cy="32" r="28" stroke="#ef4444" stroke-width="3"/>
+                        <path d="M32 20V32M32 40V41" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Analysis Error</h3>
                     <p id="errorText"></p>
                 </div>
-                <button class="btn-secondary" id="retryBtn">Try Again</button>
+                <button class="btn-secondary btn-outline" id="retryBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 6.68629 6.68629 4 10 4C11.5 4 12.8 4.6 13.8 5.5M16 4V8H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Try Again</span>
+                </button>
             </div>
         </main>
 
         <footer>
-            <p>&copy; 2024 AI Smile Makeover Dallas. Advanced smile analysis technology.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <svg class="footer-logo" viewBox="0 0 48 48" fill="none">
+                        <defs>
+                            <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="24" cy="24" r="20" fill="url(#footerGradient)"/>
+                        <path d="M15 20C15 19.4477 15.4477 19 16 19C16.5523 19 17 19.4477 17 20C17 20.5523 16.5523 21 16 21C15.4477 21 15 20.5523 15 20Z" fill="white"/>
+                        <path d="M30 20C30 19.4477 30.4477 19 31 19C31.5523 19 32 19.4477 32 20C32 20.5523 31.5523 21 31 21C30.4477 21 30 20.5523 30 20Z" fill="white"/>
+                        <path d="M15 28C15 25 18 24 24 24C30 24 33 25 33 28" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <div>
+                        <p class="footer-title">AI Smile Makeover Dallas</p>
+                        <p class="footer-subtitle">Revolutionary 2026 Platform</p>
+                    </div>
+                </div>
+                <div class="footer-tech">
+                    <span class="tech-badge">MediaPipe</span>
+                    <span class="tech-badge">PyTorch</span>
+                    <span class="tech-badge">OpenCV</span>
+                </div>
+                <p class="footer-copyright">&copy; 2026 AI Smile Makeover Dallas. Next-generation smile analysis technology.</p>
+            </div>
         </footer>
     </div>
 
