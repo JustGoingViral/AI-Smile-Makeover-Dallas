@@ -181,7 +181,8 @@ function animateScoreCircle(targetScore) {
     const circle = document.getElementById('scoreProgress');
     if (!circle) return;
     
-    const circumference = 565.48; // 2 * PI * 90
+    const radius = 90;
+    const circumference = 2 * Math.PI * radius;
     const progress = (targetScore / 10) * circumference;
     const dashoffset = circumference - progress;
     
