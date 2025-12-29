@@ -23,7 +23,7 @@ This document contains the complete codebase of the AI Smile Makeover Dallas rep
 
 ## Project Structure
 
-\`\`\`
+```
 AI-Smile-Makeover-Dallas/
 ├── .gitignore
 ├── README.md
@@ -41,15 +41,15 @@ AI-Smile-Makeover-Dallas/
 │   └── styles.css
 └── templates/
     └── index.html
-\`\`\`
+```
 
 ---
 
 ## Configuration Files
 
-### \`.gitignore\`
+### `.gitignore`
 
-\`\`\`gitignore
+```gitignore
 # Python
 __pycache__/
 *.py[cod]
@@ -112,11 +112,12 @@ Thumbs.db
 
 # Image uploads (if stored locally)
 uploads/
-\`\`\`
 
-### \`requirements.txt\`
+```
 
-\`\`\`txt
+### `requirements.txt`
+
+```txt
 Flask==3.0.0
 mediapipe==0.10.14
 opencv-python==4.9.0.80
@@ -125,15 +126,16 @@ torch==2.6.0
 torchvision==0.21.0
 Pillow==10.3.0
 Werkzeug==3.0.3
-\`\`\`
+
+```
 
 ---
 
 ## Python Application
 
-### \`app.py\`
+### `app.py`
 
-\`\`\`python
+```python
 """
 Flask application for AI Smile Makeover Dallas
 Provides web interface and API for smile analysis
@@ -329,21 +331,23 @@ if __name__ == '__main__':
         port=port,
         debug=debug_mode
     )
-\`\`\`
+
+```
 
 ---
 
 ## Model Package
 
-### \`model/__init__.py\`
+### `model/__init__.py`
 
-\`\`\`python
+```python
 # Model package for smile scoring
-\`\`\`
 
-### \`model/smile_scorer.py\`
+```
 
-\`\`\`python
+### `model/smile_scorer.py`
+
+```python
 """
 PyTorch-based smile scoring model (stub implementation)
 This is a placeholder model that generates scores based on input metrics
@@ -535,21 +539,23 @@ def create_scorer() -> SmileScorer:
         Initialized SmileScorer
     """
     return SmileScorer()
-\`\`\`
+
+```
 
 ---
 
 ## Utils Package
 
-### \`utils/__init__.py\`
+### `utils/__init__.py`
 
-\`\`\`python
+```python
 # Utils package for image analysis
-\`\`\`
 
-### \`utils/image_analysis.py\`
+```
 
-\`\`\`python
+### `utils/image_analysis.py`
+
+```python
 """
 Image analysis utilities using MediaPipe, OpenCV, and NumPy
 for smile analysis metrics including landmarks, symmetry, and color vitality
@@ -839,15 +845,16 @@ def validate_image(image_array: np.ndarray) -> Tuple[bool, Optional[str]]:
         return False, "Image is too large. Maximum size is 5000x5000 pixels"
     
     return True, None
-\`\`\`
+
+```
 
 ---
 
 ## Frontend - Static Files
 
-### \`static/script.js\`
+### `static/script.js`
 
-\`\`\`javascript
+```javascript
 // DOM Elements
 const uploadArea = document.getElementById('uploadArea');
 const fileInput = document.getElementById('fileInput');
@@ -1104,11 +1111,12 @@ function hideError() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', init);
-\`\`\`
 
-### \`static/styles.css\`
+```
 
-\`\`\`css
+### `static/styles.css`
+
+```css
 /* ============================================
    AI Smile Makeover Dallas - 2026 Platform
    Revolutionary Design System
@@ -2169,15 +2177,16 @@ footer {
         font-size: 1.05rem;
     }
 }
-\`\`\`
+
+```
 
 ---
 
 ## Frontend - Templates
 
-### \`templates/index.html\`
+### `templates/index.html`
 
-\`\`\`html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2495,15 +2504,16 @@ footer {
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
-\`\`\`
+
+```
 
 ---
 
 ## Documentation
 
-### \`README.md\`
+### `README.md`
 
-\`\`\`markdown
+```markdown
 # 🦷 AI Smile Makeover Dallas - Revolutionary 2026 Platform
 
 **Next-Generation AI-Powered Smile Analysis Technology**
@@ -2634,11 +2644,12 @@ Dental professionals can leverage this platform for:
 
 **© 2026 AI Smile Makeover Dallas** | Revolutionary Smile Analysis Technology  
 *Powered by MediaPipe, PyTorch, and Advanced Computer Vision*
-\`\`\`
 
-### \`README_SETUP.md\`
+```
 
-\`\`\`markdown
+### `README_SETUP.md`
+
+```markdown
 # 🦷 AI Smile Makeover Dallas - Revolutionary 2026 Platform Setup Guide
 
 ## Overview
@@ -2835,7 +2846,8 @@ The application includes comprehensive error handling:
 
 ## Support
 For issues or questions, please open an issue on the GitHub repository.
-\`\`\`
+
+```
 
 ---
 
@@ -2885,5 +2897,3 @@ This repository contains a complete AI-powered smile analysis web application bu
 *End of Repository Snapshot*  
 *Generated: 2025-12-29*  
 *© 2026 AI Smile Makeover Dallas*
-\`\`\`
-
